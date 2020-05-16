@@ -1,3 +1,7 @@
+---
+typora-root-url: ./
+---
+
 # 一、性能监控
 
 ## 1 引出
@@ -8,9 +12,9 @@
 
 Client --  Server -- 存储引擎
 
-![image-20200428165226909](F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200428165226909.png)
 
 
+![](/图片/image-20200505173207023.png)
 
 ## 2 show profile statement
 
