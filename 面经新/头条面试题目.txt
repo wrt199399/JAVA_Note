@@ -1,0 +1,35 @@
+项目介绍
+
+hive切换spark是case by case还是怎么去做的，自动化工具如何去弄？
+
+1.spark框架的改造，shuffle的原理和过程
+2.synchronized和valotile关键字
+3.线程池了解么
+4.算法题目，排一亿个数字，内存只有1G，需要求topK怎么去求解
+实时数据如何保证数据不丢失
+5.编程题目
+
+
+int getMissingNumber(int[] array)
+array： size = 0   value  0~n   不重复
+
+  public static int getMissingNumber(int[] array){
+        if(array==null || array.length=0){
+            return -1;
+        }
+       
+        int[] arraycopy=new int[array.length+1];
+       
+        for(int i=0;i<array.length;i++){
+            int index=array[i];
+            arraycopy[index]=-1;
+        }
+       
+        int targetNum=0;
+        for(int i=0;i<arraycopy.length;i++){
+            if(arraycopy[i]==0){
+                return arraycopy[i];
+            }
+        }
+        return -1;
+    }
