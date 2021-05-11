@@ -56,7 +56,7 @@ ClassFile {
 
 ​		1.双亲委派
 
- 		2.LazyLoading的五种情况
+​	    2.LazyLoading的五种情况
 
 ​        3.ClassLoad的源码
 
@@ -67,10 +67,8 @@ ClassFile {
 2)  Linking
 
 1. Verification 校验  (检验文件是否符合JVM规定)
-
 2. preparation 准备 (类中的静态变量赋默认值)
-
-   		3. resolution  解析 (将 类，方法，属性等符号引用解析为直接引用 )
+3. resolution  解析 (将 类，方法，属性等符号引用解析为直接引用 )
 
 3）initializing 初始化 （给静态成员变量赋初始值）
 
