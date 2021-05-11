@@ -1,6 +1,6 @@
 # 一、jvm、 class 结构
 
-![image-20200617165555087](.\图片\image-20200617165555087.png)
+![image-20200617165555087](F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200617165555087.png)
 
 任何语言，只要符合class的规范，都可以再java虚拟机上执行
 
@@ -84,7 +84,7 @@ ClassFile {
 
 类加载器的层次问题
 
-![image-20200901154352285](.\图片\image-20200901154352285.png)
+![image-20200901154352285](F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200901154352285.png)
 
 不同的类加载器负责加载不同的类
 
@@ -122,17 +122,17 @@ java默认为混合模式 ：解释器+ 热点代码编译
 
 ## 1.硬件层 -- 并发优化基础知识
 
-<img src=".\图片\image-20200914155103813.png" alt="image-20200914155103813" style="zoom:50%;" />
+<img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200914155103813.png" alt="image-20200914155103813" style="zoom:50%;" />
 
 因此，CPU从外部共享缓存中读取数据时，就遇到一个问题，多个cpu核心对应各自的L1,L2缓存，怎样保证这些核心的缓存一致性？
 
-<img src=".\图片\image-20200914155827335.png" alt="image-20200914155827335" style="zoom:50%;" />
+<img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200914155827335.png" alt="image-20200914155827335" style="zoom:50%;" />
 
 答：使用缓存一致性协议。InterCpu使用的是MESI协议，不同 的Cpu使用不同的协议
 
 给数据标记状态，分为四种状态。
 
-<img src=".\图片\image-20200914160504230.png" alt="image-20200914160504230" style="zoom:50%;" />
+<img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200914160504230.png" alt="image-20200914160504230" style="zoom:50%;" />
 
 因此，现代Cpu的一致性实现 = 缓存锁 (MESI ..)+ 总线锁
 
@@ -168,7 +168,7 @@ LoadLoad屏障 ； StoreStore屏障 ；LoadStore ；StoreLoad ；
 
 2.JVM层面：
 
-  <img src=".\图片\image-20200914182632833.png" alt="image-20200914182632833" style="zoom: 80%;" />
+  <img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200914182632833.png" alt="image-20200914182632833" style="zoom: 80%;" />
 
 3.OS和硬件层面： hsdis - HotSpot Dis Assembler	;	windows使用lock实现
 
@@ -200,9 +200,9 @@ Oops = ordinary object pointers 普通对象指针
 
 markword 64位：大体包含 锁信息2位，是否偏向1位，gc标记 分带年龄 ， 无锁状态还包含独享的hashcode
 
-<img src=".\图片\image-20200915175426054.png" alt="image-20200915175426054" style="zoom:50%;" />
+<img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200915175426054.png" alt="image-20200915175426054" style="zoom:50%;" />
 
-<img src=".\图片\image-20200915175710021.png" alt="image-20200915175710021" style="zoom:67%;" />
+<img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200915175710021.png" alt="image-20200915175710021" style="zoom:67%;" />
 
 **4.对象怎么定位**
 
@@ -222,7 +222,7 @@ https://blog.csdn.net.clover_lily/article/details/80095580
 
 ## 1.运行时数据区
 
-<img src=".\图片\image-20200916172416448.png" alt="image-20200916172416448"  />
+<img src="F:\java学习笔记\java并发编程\JAVA_NOTE\JAVA_Note\图片\image-20200916172416448.png" alt="image-20200916172416448"  />
 
 PC程序计数器：存放指令位置，虚拟机的运行类似一个循环
 
